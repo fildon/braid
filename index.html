@@ -4,8 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Braid</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+      }
+      svg {
+        border: 1px solid black;
+        min-width: min(90vw, 60ch);
+        max-width: 60ch;
+      }
+    </style>
   </head>
   <body>
+    <h1>Braid</h1>
     <span>Hello world</span>
+    <svg viewBox="0 0 1000 1000">
+      <circle cx="300" cy="210" r="25" />
+      <!-- grid lines -->
+      <g>
+        <line
+          id="rowLine"
+          x1="0"
+          y1="0"
+          x2="1000"
+          y2="0"
+          stroke="black"
+          stroke-width="1"
+        />
+        <use href="#rowLine" y="100" />
+        <use href="#rowLine" y="200" />
+        <use href="#rowLine" y="300" />
+        <use href="#rowLine" y="400" />
+        <use href="#rowLine" y="500" />
+        <use href="#rowLine" y="600" />
+        <use href="#rowLine" y="700" />
+        <use href="#rowLine" y="800" />
+        <use href="#rowLine" y="900" />
+        <line
+          id="colLine"
+          x1="0"
+          y1="0"
+          x2="0"
+          y2="1000"
+          stroke="black"
+          stroke-width="1"
+        />
+        <use href="#colLine" x="100" />
+        <use href="#colLine" x="200" />
+        <use href="#colLine" x="300" />
+        <use href="#colLine" x="400" />
+        <use href="#colLine" x="500" />
+        <use href="#colLine" x="600" />
+        <use href="#colLine" x="700" />
+        <use href="#colLine" x="800" />
+        <use href="#colLine" x="900" />
+      </g>
+    </svg>
   </body>
 </html>
