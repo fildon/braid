@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Braid</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+      }
+      svg {
+        border: 1px solid black;
+        min-width: min(90vw, 60ch);
+        max-width: 60ch;
+      }
+    </style>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <h1>Braid</h1>
+    <span>Hello world</span>
+    <svg viewBox="0 0 1000 1000">
+      <circle cx="300" cy="210" r="25" />
+      <!-- grid lines -->
+      <g>
+        <line
+          id="rowLine"
+          x1="0"
+          y1="0"
+          x2="1000"
+          y2="0"
+          stroke="black"
+          stroke-width="1"
+        />
+        <use href="#rowLine" y="100" />
+        <use href="#rowLine" y="200" />
+        <use href="#rowLine" y="300" />
+        <use href="#rowLine" y="400" />
+        <use href="#rowLine" y="500" />
+        <use href="#rowLine" y="600" />
+        <use href="#rowLine" y="700" />
+        <use href="#rowLine" y="800" />
+        <use href="#rowLine" y="900" />
+        <line
+          id="colLine"
+          x1="0"
+          y1="0"
+          x2="0"
+          y2="1000"
+          stroke="black"
+          stroke-width="1"
+        />
+        <use href="#colLine" x="100" />
+        <use href="#colLine" x="200" />
+        <use href="#colLine" x="300" />
+        <use href="#colLine" x="400" />
+        <use href="#colLine" x="500" />
+        <use href="#colLine" x="600" />
+        <use href="#colLine" x="700" />
+        <use href="#colLine" x="800" />
+        <use href="#colLine" x="900" />
+      </g>
+      <!-- Prototype ropes -->
+      <g>
+        <line
+          x1="540"
+          y1="200"
+          x2="540"
+          y2="300"
+          stroke="black"
+          stroke-width="2"
+        />
+        <line
+          x1="560"
+          y1="200"
+          x2="560"
+          y2="300"
+          stroke="black"
+          stroke-width="2"
+        />
+        <path
+          d="M 540 300 q 0 20 60 60"
+          stroke="black"
+          stroke-width="2"
+          fill="none"
+        />
+        <path
+          d="M 560 300 q 0 20 40 40"
+          stroke="black"
+          stroke-width="2"
+          fill="none"
+        />
+        <path
+          d="M 600 360 q 40 20 40 40"
+          stroke="black"
+          stroke-width="2"
+          fill="none"
+        />
+        <path
+          d="M 600 340 q 60 20 60 60"
+          stroke="black"
+          stroke-width="2"
+          fill="none"
+        />
+        <line
+          x1="640"
+          y1="400"
+          x2="640"
+          y2="500"
+          stroke="black"
+          stroke-width="2"
+        />
+        <line
+          x1="660"
+          y1="400"
+          x2="660"
+          y2="500"
+          stroke="black"
+          stroke-width="2"
+        />
+      </g>
+      <!-- Prototype v2 -->
+      <g>
+        <line
+          x1="450"
+          y1="300"
+          x2="450"
+          y2="400"
+          stroke="black"
+          stroke-width="20"
+        />
+        <path
+          d="M 450 400 q 0 30 50 50"
+          stroke="black"
+          stroke-width="20"
+          fill="none"
+        />
+        <path
+          d="M 500 450 q 50 20 50 50"
+          stroke="black"
+          stroke-width="20"
+          fill="none"
+        />
+        <line
+          x1="550"
+          y1="500"
+          x2="550"
+          y2="600"
+          stroke="black"
+          stroke-width="20"
+        />
+        <line
+          x1="450"
+          y1="300"
+          x2="450"
+          y2="400"
+          stroke="white"
+          stroke-width="10"
+        />
+        <path
+          d="M 450 400 q 0 30 50 50"
+          stroke="white"
+          stroke-width="10"
+          fill="none"
+        />
+        <path
+          d="M 500 450 q 50 20 50 50"
+          stroke="white"
+          stroke-width="10"
+          fill="none"
+        />
+        <line
+          x1="550"
+          y1="500"
+          x2="550"
+          y2="600"
+          stroke="white"
+          stroke-width="10"
+        />
+      </g>
+    </svg>
+  </body>
+</html>
