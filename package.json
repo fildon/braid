@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "prebuild": "shx rm -rf dist",
+    "build": "npm run build:ts && npm run build:static",
+    "build:ts": "esbuild src/index.ts --bundle --outfile=dist/index.js",
+    "build:static": "shx cp -r ./static/. ./dist/"
+  },
+  "dependencies": {
+    "esbuild": "^0.23.0",
+    "shx": "^0.3.4"
+  }
+}
